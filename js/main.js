@@ -2,6 +2,18 @@ jQuery(document).ready(function(jQuery) {
 
 	"use strict";
 
+	// Main Navigation
+    jQuery( '.navbar-toggler' ).on( 'click', function() {
+        jQuery('.hamburger-menu').toggleClass('open');
+        jQuery('.site-navigation').toggleClass('show');
+        jQuery('body').toggleClass('show');
+    });
+
+    jQuery( '.site-navigation li a' ).on( 'click', function() {
+        jQuery(this).toggleClass('open');
+        jQuery('.site-navigation').toggleClass('show');
+        jQuery('body').toggleClass('show');
+    });
 
 	// loader
 	var loader = function() {
@@ -74,7 +86,7 @@ jQuery(document).ready(function(jQuery) {
 
 	// navigation
 	
-	jQuery('#ftco-navbar ul li a[href*="#"]:not([href="#"]), #saiba-mais').click(function() {
+	jQuery('#ftco-navbar ul li a[href*="#"]:not([href="#"]), #saiba-mais, #cont-renov').click(function() {
 
 	    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
 	        var target = jQuery(this.hash);

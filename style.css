@@ -79,6 +79,8 @@ a:hover, a:active {
     margin: 0 auto;
     transition: .5s ease-in-out;
     cursor: pointer;
+    float: left;
+    margin: 0 10px 0 0;
 }
 
 .hamburger-menu span {
@@ -130,19 +132,7 @@ a:hover, a:active {
 # Main Menu
 --------------------------------*/
 .site-navigation ul {
-    position: fixed;
-    top: 0;
-    left: -320px;
-    z-index: 9999;
-    width: 320px;
-    max-width: calc(100% - 120px);
-    height: 100%;
-    padding: 30px 15px;
-    margin: 0;
-    background: #fff;
     list-style: none;
-    overflow-x: scroll;
-    transition: all 0.35s;
 }
 
 .site-navigation.show ul {
@@ -2066,12 +2056,15 @@ nav {
     color: #fff; }
   .ftco-navbar-light .navbar-toggler {
     border: none;
-    color: rgba(255, 255, 255, 0.5) !important;
+    color: #000 !important;
     cursor: pointer;
     padding-right: 0;
     text-transform: uppercase;
     font-size: 16px;
-    letter-spacing: .1em; }
+    letter-spacing: .1em; 
+    float: right;
+    margin: 23px 0;
+    line-height: 22px;}
   .ftco-navbar-light.scrolled {
     position: fixed;
     right: 0;
@@ -2147,10 +2140,12 @@ nav {
     background: url("images/testimonial-content-bg.png") no-repeat center;
     background-size: contain;
     display: block;
-    padding: 40px 20px;
+    padding: 40px 15px;
     text-align: center;
     transition:0.3s ease;
     cursor: pointer;
+        font-size: 15px;
+    line-height: 1.3;
 }
 #detran .link-detran:hover{
     transform: scale(1.1);
@@ -2159,15 +2154,27 @@ nav {
 #detran .link-detran i{
     display: table;
     margin: 0 auto;
-    font-size: 40px;
+    font-size: 30px;
 }
 #detran .detran-summary{
     margin-bottom: 40px;
 }
 
+#renov,
 #instalacoes{
     margin-top: 30px;
     margin-bottom: 100px;
+}
+
+#instalacoes .detran-summary,
+#renov .detran-summary,
+#renov .button.gradient-bg{
+    margin-top: 20px;
+    float: left;
+}
+
+#instalacoes .detran-summary{
+    width:100%;
 }
 
 .image-popup {
@@ -2179,6 +2186,7 @@ nav {
     overflow: hidden;
     display: block;
     position: relative;
+    padding: 0;
 }
 
 .image-popup:not(:last-child) {
@@ -2211,6 +2219,21 @@ nav {
 .mfp-with-zoom.mfp-removing.mfp-bg {
   opacity: 0; }
 
+  #renov > div > div > div > div > div.col-12.col-md-5.col-lg-7 > div{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+    #renov > div > div > div > div > div.col-12.col-md-5.col-lg-7 > div > div{
+        padding: 0;
+    }
+    #renov > div > div > div > div > div.col-12.col-md-5.col-lg-7 > div > div > img{
+        height: 100%;
+        object-fit: cover;
+        padding: 0;
+    }
+
 
 
 /*mobile version*/
@@ -2236,4 +2259,156 @@ nav {
     .site-navigation ul li a {
         padding: 30px 0;
     }
+}
+.show-mobile{
+    display:none;
+}
+@media screen and (max-width: 768px) {
+    .site-header .nav-bar .container{
+        max-width: none;
+        margin: 0 !important;
+    }
+    .homepage-boxes{
+        padding:60px 0 0;
+    }
+    #detran > div > div > div > div > div.col-12.col-md-5.col-lg-5{
+        padding:130px;
+    }
+    .image-popup{
+        max-width: none;
+    }
+    #detran > div > div > div > div > div.col-12.col-md-7.col-lg-7 > div{
+        margin:20px 0;
+    }
+    body > header > div.nav-bar > div > div{
+        margin:0;
+    }
+    body > header > div.nav-bar > div > div > div{
+        padding:0;
+    }
+    #ftco-navbar{
+        width:100%;
+        display: block !important;
+    }
+    #ftco-navbar .site-branding{
+        width:190px;
+        float: left;
+    }
+    #ftco-navbar .site-branding img{
+        max-width:100%;
+    }
+    body > footer > div > div > div > div.col-12.col-md-6.col-lg-5.mt-5.mt-md-0 > div > div > ul.p-0.m-0.col-md-6.mt-4{
+        margin-top:20px !important;
+    }
+    .call-btn{
+        margin-right: auto !important;
+        margin-left: auto !important;
+    }
+    .site-navigation ul {
+        position: fixed;
+        top: 0;
+        left: -320px;
+        z-index: 9999;
+        width: 320px;
+        max-width: calc(100% - 120px);
+        height: calc(100% - 91px);
+        padding: 30px 15px;
+        margin: 91px 0 0;
+        background: #fafafa;
+        list-style: none;
+        overflow-x: scroll;
+        transition: all 0.35s;
+        box-shadow: 0px 5px 5px rgba(0,0,0,0.1);
+    }
+    body:before{
+        content:"";
+        transition: 0.2s ease;
+    }
+    body.show{
+        position: relative;
+        transition: 0.2s ease;
+    }
+    body.show:before{
+        position: absolute;
+        background: rgba(0,0,0,0.2);
+        width:100%;
+        height:100%;
+        left:0;
+        top:0;
+        z-index: 9
+    }
+    .hero-content-overlay {
+        top: 0;
+        left: 0;
+        background: rgba(255,255,255,0.6);
+    }
+    #detran{
+        position: relative;
+    }
+    #detran:before {
+        content:"";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        position:absolute;
+        background: rgba(255,255,255,0.6);
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 800px) {
+    .foot-about h2,
+    .foot-about p{
+        display: block;
+        float:left;
+        margin:0 !important;
+    }
+    body > footer > div > div > div > div.col-12.col-md-12.col-lg-3{
+        margin-bottom:40px;
+    }
+}
+@media screen and (max-width: 540px) {
+    .hero-content-overlay h2{
+        font-size:40px;
+    }
+    .show-mobile{
+        display:block;
+    }
+    .hide-mobile{
+        display: none;
+    }
+    .appointment-box form select, .appointment-box form textarea, .appointment-box form input[type="text"], .appointment-box form input[type="email"], .appointment-box form input[type="number"]{
+        width:100%;
+    }
+    .homepage-boxes{
+        padding:0px 0 0;
+    }
+    .image-popup{
+        width: calc(50% - 20px);
+        padding: 0;
+        float: left;
+        margin: 0 10px;
+    }
+    #detran .col-sm-6{
+        width:50%;
+    }
+    .call-btn{
+        min-width: 0;
+    }
+}
+@media screen and (max-width: 330px) {
+    span.menu{
+        display: none
+    }
+    .hero-content-wrap{
+        min-height: 95vh;
+    }
+}
+
+.hide-item{
+    display:none;
+}
+
+.gs{
+    font-family: Cormorant, Times, serif;
+    font-size: 15px;
 }
