@@ -413,6 +413,8 @@
                         <h2 class="d-flex align-items-center">Mande uma Mensagem</h2>
 
                         <form class="d-flex flex-wrap justify-content-between" action="https://formspree.io/cfc_diretranrolandia@hotmail.com" method="POST">
+                            <input type="hidden" name="_subject" value="Novo contato do site" />
+
                             <input type="text" placeholder="Nome" required="required">
 
                             <input type="number" placeholder="Telefone" required="required">
@@ -420,6 +422,10 @@
                             <input type="email" name="_replyto" placeholder="E-mail">
 
                             <textarea placeholder="Sua Mensagem"></textarea>
+
+                            <input type="text" name="_gotcha" style="display:none" />
+
+                            <input type="hidden" name="_language" value="pt-BR" />
 
                             <input class="button gradient-bg" type="submit" value="Enviar">
                         </form>
