@@ -16,6 +16,7 @@ img {
 --------------------------------------------------------------*/
 a {
     color: #262626;
+    transition: 0.2s ease;
 }
 
 a:visited {
@@ -346,6 +347,10 @@ a:hover, a:active {
     background: linear-gradient(270deg, #52b2e5 0%, #4995bd 20%, #1c4faa 100%); /* w3c */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#18a3eb', endColorstr='#587de4',GradientType=1 ); /* ie6-9 */
     color: #fff;
+}
+
+.button.gradient-bg:hover{
+    background: rgba(50,200,250,1);
 }
 
 /*
@@ -2219,19 +2224,46 @@ nav {
 .mfp-with-zoom.mfp-removing.mfp-bg {
   opacity: 0; }
 
-  #renov > div > div > div > div > div.col-12.col-md-5.col-lg-7 > div{
+  #renov{
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(50,200,250,1)), color-stop(100%, rgba(88,125,228,1)));
+    background: -webkit-linear-gradient(180deg, rgba(50,200,250,1) 0%, rgba(88,125,228,1) 100%);
+    background: -o-linear-gradient(180deg, rgba(50,200,250,1) 0%, rgba(88,125,228,1) 100%);
+    background: -ms-linear-gradient(180deg, rgba(50,200,250,1) 0%, rgba(88,125,228,1) 100%);
+    background: linear-gradient(270deg, #52b2e5 0%, #4995bd 20%, #1c4faa 100%);
+    color: #fff;
+  }
+
+  #renov .col-lg-7{
+    padding: 50px 0px;
+  }
+
+  #renov h2{
+    color: #fff;
+  }
+
+  #renov a{
+    background: #fff;
+    color: #184cac;
+  }
+
+  #renov a:hover{
+    background: rgba(50,200,250,1);
+  }
+
+  #renov > div > div > div > div > div.col-12 > div{
         position: relative;
         width: 100%;
         height: 100%;
         margin: 0;
     }
-    #renov > div > div > div > div > div.col-12.col-md-5.col-lg-7 > div > div{
+    #renov > div > div > div > div > div.col-12 > div > div{
         padding: 0;
     }
-    #renov > div > div > div > div > div.col-12.col-md-5.col-lg-7 > div > div > img{
+    #renov > div > div > div > div > div.col-12 > div > div > img{
         height: 100%;
         object-fit: cover;
         padding: 0;
+        opacity: 0.7;
     }
 
 
@@ -2367,6 +2399,9 @@ nav {
     }
 }
 @media screen and (max-width: 540px) {
+    #renov .col-lg-7{
+        padding: 50px 30px;
+    }
     .hero-content-overlay h2{
         font-size:40px;
     }
