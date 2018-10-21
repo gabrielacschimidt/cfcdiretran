@@ -25,6 +25,10 @@ jQuery(document).ready(function(jQuery) {
 	};
 	loader();
 
+	jQuery( '.obrigado .close' ).on( 'click', function() {
+		jQuery('.obrigado').fadeOut();
+    });
+
 	var mySwiper = new Swiper('.hero-slider', {
         slidesPerView: 1,
         spaceBetween: 0,
