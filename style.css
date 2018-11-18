@@ -2182,6 +2182,21 @@ nav {
     width:100%;
 }
 
+#premiacoes{
+    text-align: center;
+    padding-top: 40px;
+}
+#premiacoes h2{
+    margin-bottom: 15px;
+}
+#premiacoes h5{
+    margin-bottom: 50px;
+}
+#premiacoes figure img{
+    max-height: 250px;
+    width: auto;
+}
+
 .image-popup {
     cursor: -webkit-zoom-in;
     cursor: -moz-zoom-in;
@@ -2386,6 +2401,12 @@ nav {
         position:absolute;
         background: rgba(255,255,255,0.6);
     }
+    #premiacoes .filler{
+        display: none;
+    }
+    #premiacoes figure img{
+        max-height:180px;
+    }
 }
 @media screen and (min-width: 768px) and (max-width: 800px) {
     .foot-about h2,
@@ -2473,3 +2494,4 @@ nav {
     padding: 10px;
     font-size:25px;
 }
+
